@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'yekanbakhReg';
+    src: url("./YekanBakh/YekanBakh-Regular/YekanBakh-Regular.eot"),
+    url("./YekanBakh/YekanBakh-Regular/YekanBakh-Regular.ttf"),
+    url("./YekanBakh/YekanBakh-Regular/YekanBakh-Regular.woff")
+    ;
+}
+
+@font-face {
+    font-family: 'yekanbakhBold';
+    src: url("./YekanBakh/YekanBakh-Bold/YekanBakh-Bold.eot"),
+    url("./YekanBakh/YekanBakh-Bold/YekanBakh-Bold.ttf"),
+    url("./YekanBakh/YekanBakh-Bold/YekanBakh-Bold.woff")
+    ;
+}
+
+@font-face {
+    font-family: 'yekanbakhMed';
+    src: url("./YekanBakh/YekanBakh-Medium/YekanBakh-Medium.eot"),
+    url("./YekanBakh/YekanBakh-Medium/YekanBakh-Medium.ttf"),
+    url("./YekanBakh/YekanBakh-Medium/YekanBakh-Medium.woff")
+    ;
+}
+
+@font-face {
+    font-family: 'yekanbakhHeavy';
+    src: url("./YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.eot"),
+    url("./YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.ttf"),
+    url("./YekanBakh/YekanBakh-Heavy/YekanBakh-Heavy.woff");
+}
+
+@font-face {
+    font-family: 'yekanbakhFat';
+    src: url("./YekanBakh/YekanBakh-Fat/YekanBakh-Fat.eot"),
+    url("./YekanBakh/YekanBakh-Fat/YekanBakh-Fat.ttf"),
+    url("./YekanBakh/YekanBakh-Fat/YekanBakh-Fat.woff")
+    ;
+}
+
+@font-face {
+    font-family: 'yekahbakhLight';
+    src: url("./YekanBakh/YekanBakh-Light/YekanBakh-Light.eot") , 
+    url("./YekanBakh/YekanBakh-Light/YekanBakh-Light.ttf"), 
+    url("../fonts/YekanBakh/YekanBakh-Light/YekanBakh-Light.woff")
+    ;
+}
+.yekanbakhReg{
+    font-family: 'yekanbakhReg';
+}
+.yekanbakhBold{
+    font-family:'yekanbakhBold';
+}
+.yekanbakhMed{
+    font-family: 'yekanbakhMed';
+}
+.yekanbakhHeavy{
+    font-family: 'yekanbakhHeavy';
+}
+.yekanbakhFat{
+    font-family: 'yekanbakhFat';
+}
+.yekahbakhLight{
+    font-family: 'yekahbakhLight';
+}

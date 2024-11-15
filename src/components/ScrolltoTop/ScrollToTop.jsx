@@ -1,0 +1,39 @@
+"use client";
+import { useEffect  , useState } from "react";
+import { IoIosArrowUp } from "react-icons/io";
+
+
+export default function ScrollToTop(){
+    const [active , setActive] = useState(false);
+    useEffect(()=>{
+       function scrollHadler(){
+         if(window.scrollY > 800){
+            setActive(true);
+         }else{
+            setActive(false);
+
+         }
+
+       }
+
+       window.addEventListener("scroll" ,scrollHadler )
+      
+      
+       return ()=> window.removeEventListener("scroll",scrollHadler)
+    
+    },[window.screenY]);
+
+
+    const gotoTop = ()=>{
+     window.scrollTo({top:0 , behavior:"smooth"});
+   } 
+    
+    return(
+        <button 
+            onClick={()=>gotoTop()}
+            className={` ${active?"flex":"hidden"} bg-sky-800 text-white w-[55px] h-[55px]  items-center justify-center fixed bottom-10 right-10 z-[90]  rounded-lg text-4xl`}
+        >
+            <IoIosArrowUp/>
+        </button>
+    );
+}
