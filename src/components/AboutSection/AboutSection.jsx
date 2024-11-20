@@ -1,9 +1,14 @@
+"use client";
 import Image from "next/image";
+import { useNav } from "@/context/NavContextProvider";
+
 
 export default function AboutSection(){
+    const {about} = useNav();
+    
     return(
-        <section className="px-5 py-20 flex bg-[#e5e5e5]">
-            <div className="w-[50%]">
+        <section ref={about} className="px-5 sm:px-20 py-28 flex flex-col lg:flex-row gap-3 bg-[#e5e5e5]">
+            <div className="w-full lg:w-[50%] order-2">
                 <Image 
                     src="img/about-img.svg"
                     width={500}
@@ -13,8 +18,8 @@ export default function AboutSection(){
                 />
             </div>
 
-            <div className="w-[50%] flex flex-col gap-5">
-                <h1 className="text-5xl yekanbakhFat text-gray-700">
+            <div className="w-full lg:w-[50%] flex flex-col gap-5 order-1">
+                <h1 className="text-4xl md:text-5xl yekanbakhFat text-gray-700">
                 آینده طراحی از اینجا شروع می شود
                 </h1>
 
@@ -29,7 +34,7 @@ export default function AboutSection(){
                     
                 </ul>
                 <div className="w-full flex justify-start py-4 px-3">
-                    <button className="bg-[#2f80ed] w-[130px] h-[58px] rounded-xl text-white text-lg yekanbakhLight">
+                    <button className="bg-[#2f80ed] w-[100px]  h-[50px] lgw-[130px] lgh-[58px] rounded-xl text-white text-sm lgtext-lg yekanbakhLight">
                         بیشتر
                     </button>
                 </div>
@@ -40,7 +45,7 @@ export default function AboutSection(){
 }
 function Item({text}){
     return(
-        <li>
+        <li className="text-sm leading-relaxed">
             <div>
 
             </div>

@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function DownloadApp(){
     return(
-        <div className="flex flex-col gap-8 w-[23%] ">
+        <div className="flex flex-col gap-8 w-full md:w-[48%] lg:w-[23%] ">
             <h3 className="text-2xl yekanbakhFat">دانلود برنامه </h3>
             <div className="flex flex-col gap-4">
                 <DownloadBox href="/" icon={<TfiApple/>} marketName="AppleStore"/>

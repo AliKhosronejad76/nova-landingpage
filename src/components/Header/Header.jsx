@@ -4,10 +4,23 @@ import Link from "next/link";
 import Image from "next/image";
 import { CiBellOn } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
+import { GiHamburgerMenu } from "react-icons/gi";
+import Drawer from "../Drawer/Drawer";
+import Menu from "../Menu/Menu";
+import { useDrawer } from "@/context/DrawerContextProvider";
 
 
 export default function Header(){
     const [active , setActive] = useState(false); 
+    const {setDrawer , drawer } = useDrawer();
+    
+    
+    
+    const drawerHandler = ()=>{
+        setDrawer(prev=>!prev);
+    }
+
+
     // window.onbeforeunload = function () {
     //     window.scrollTo(0, 0);
     // }
@@ -34,7 +47,7 @@ export default function Header(){
     },[]);
 
     return(
-        <header className={`px-7 flex justify-between h-[88px]  left-0 right-0 z-[100] top-0 ${active ? "bg-white fixed":"bg-transparent fixed"}`}>
+        <header className={` px-7 flex justify-between h-[88px]  left-0 right-0 z-[100] top-0 ${active ? "bg-white fixed":"bg-transparent fixed"}`}>
             <div className="w-[20%]">
                 <div className="w-max h-full flex items-center">
                     <Link href="/">
@@ -49,19 +62,14 @@ export default function Header(){
             </div>
 
             <div className="w-[80%] flex items-center justify-between">
-                <ul className="flex yekanbakhBold ">
-                    <ListItem  title={"خانه"}/>
-                    <ListItem  title={"امکانات"}/>
-                    <ListItem  title={"درباره ما"}/>
-                    <ListItem  title={"خانه"}/>
-                    <ListItem  title={"نمونه کارها"}/>
-                    <ListItem  title={"جدول قیمت ها"} />
-                    <ListItem  title={"تیم ما"}/>
-                    <ListItem  title={"تماس با ما"}/>
+                <div className="hidden lg:block">
+                 <Menu dir="row"/>
 
-                </ul>
-
-                <div className="h-full flex items-center gap-2">
+                </div>
+                <div className="text-3xl text-gray-600 w-full flex items-center justify-end lg:hidden"> 
+                    <GiHamburgerMenu onClick={()=>setDrawer(prev=>!prev)}/>
+                </div>
+                <div className="hidden h-full lg:flex items-center gap-2">
                     <button className="text-2xl">
                         <CiBellOn/>
                     </button>
@@ -71,14 +79,8 @@ export default function Header(){
                 </div>
                 
             </div>
+            <Drawer  />
         </header>
     )
 }
 
-function ListItem({title}){
-    return(
-        <li className="w-[80px] h-[33px]  p-2 text-sm hover:text-blue-800 hover:border hover:border-blue-800 rounded-3xl flex items-center justify-center text-nowrap transition duration-400 cursor-pointer">
-             {title}
-        </li>
-    );
-} 

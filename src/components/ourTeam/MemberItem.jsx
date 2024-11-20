@@ -11,13 +11,13 @@ export default function MemberItem({
    const [hover , setHover]= useState();
 
    return(
-       <div className={`w-[48%] mb-10 bg-red-100 `}>  
+       <div className={`w-full md:w-[48%] mb-10 bg-red-100 `}>  
            <div className="relative">
                <Image 
                    src={img}
                    width={700}
                    height={700}
-                   className=" object-cover relative h-[550px]"
+                   className="w-full object-cover relative h-[550px]"
                /> 
                <OverlyOption hover={hover} setHover={setHover} />
            </div>

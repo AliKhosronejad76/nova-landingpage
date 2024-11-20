@@ -6,22 +6,23 @@ import Banner from "@/components/Banner/Banner";
 import InterduceServices from "@/components/InterduceServices/InterdeuceServices";
 import AboutSection from "@/components/AboutSection/AboutSection";
 import Portfolio from "@/components/Portfolio/Portfolio";
-
+import Pricing from "@/components/Pricing/Pricing";
 
 
 export default function Home() {
   return (
-      <div>
+      <>
         <Banner/>
         <InterduceServices/>
         <AboutSection/>
         <Portfolio/>
+        <Pricing/>
         <OurTeam/>
         <ClientComments/>
         <Contact />
         <Customers/>
       
 
-      </div>
+      </>
   );
 }

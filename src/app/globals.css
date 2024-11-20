@@ -9,9 +9,21 @@ body{
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing:border-box;
 }
 
 .bg-overly{
   background: linear-gradient(0deg, rgba(78,215,226,1) 40%, rgba(0,212,255,0.0818965517241379) 100%);
 }
+
+
+/* .drawer-open{
+  max-height:max-content;
+  overflow:visible;
+  transition:max-height 0.9s ease-out;
+}
+.drawer-close{
+  max-height: 0;
+  overflow:hidden;
+  display:none;
+} */

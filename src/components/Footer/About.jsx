@@ -8,7 +8,7 @@ import { FaFacebookF } from "react-icons/fa";
 
 export default function About(){
     return(
-        <div className="w-[29%] flex flex-col gap-8">
+        <div className="w-full md:w-[48%] lg:w-[29%] flex flex-col gap-8">
             <Image 
                 width={300}
                 height={300}

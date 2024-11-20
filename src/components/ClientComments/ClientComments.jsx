@@ -3,9 +3,9 @@ import Image from "next/image";
 
 export default function ClientComments(){
     return(
-        <section className="py-14 pb-8 px-8 ">
+        <section className="py-14 pb-8 px-10 sm:px-20 lgpx-8 ">
            <h1 className="text-center text-4xl yekanbakhFat my-5 text-gray-600">تجربیات کاربران</h1>
-            <div className="w-full flex justify-between flex-wrap mt-8">
+            <div className="w-full flex flex-col md:flex-row md:justify-between flex-wrap mt-8">
                 <CommentItem 
                     clientName="مریم احدی"
                     jobTitle="تورلیدر"
@@ -33,7 +33,7 @@ export default function ClientComments(){
 
 function CommentItem({clientName , jobTitle , photo}){
     return(
-        <div className="w-[48%] flex flex-col items-center gap-5 rounded-xl bg-transparent p-5 mb-6 shadow-xl">
+        <div className="w-full md:w-[48%] flex flex-col items-center gap-5 rounded-xl bg-transparent p-5 mb-6 shadow-xl">
            
             <div className="flex flex-col items-center gap-3">
                 <div className="w-14 h-14 rounded-full ">

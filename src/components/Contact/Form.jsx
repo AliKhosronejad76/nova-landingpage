@@ -7,7 +7,7 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 export default function Form(){
     return(
-        <form    className="w-[67%] ">
+        <form    className="w-full lgw-[67%] ">
             <div className="w-full flex flex-wrap justify-between py-3">
                 <Input icon={<AiOutlineUser/>} placeholder={"نام"} value={""}/>
                 <Input icon={<LuPhone/>} placeholder={"شماره تلفن"} value={""}/>
@@ -29,7 +29,7 @@ export default function Form(){
 
 function Input({icon , value , placeholder , }){
     return(
-        <div className="w-[48%] bg-white rounded-md  flex items-center text-gray-700 mb- mb-5 shadow-lg">
+        <div className="w-full md:w-[48%] bg-white rounded-md  flex items-center text-gray-700 mb- mb-5 shadow-lg">
             <div className="w-[10%] flex items-center justify-center text-xl text-gray-500" >
                 {icon}
             </div>
