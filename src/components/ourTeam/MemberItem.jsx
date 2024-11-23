@@ -1,6 +1,12 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import { motion } from  "framer-motion"; 
+import Link from "next/link";
+import { FaLinkedin } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTwitter } from "react-icons/fa";
+import { FaFacebookF } from "react-icons/fa";
 
 
 export default function MemberItem({
@@ -33,9 +39,30 @@ export default function MemberItem({
 
 
 function OverlyOption(){
+    const [hover , setHover] = useState(false);
+    
     return(
-        <div className={`transition duration-500 absolute bg-overly bottom-0 left-0 right-0 top-[100px] flex items-end pb-8`}>
-             1111111111111111111           
+        <div 
+           onMouseEnter={()=>setHover(true)}
+           onMouseLeave={()=>setHover(false)} 
+           className={`${hover ? "translate-y-0 opacity-1":"-tranlate-y-10 opacity-0"} transition duration-500 absolute bg-overly bottom-0 left-0 right-0 top-[100px] flex items-end justify-center pb-8`}
+           >
+            <div className="w-[70%] gap-3 text-gray-700 mx-auto flex items-center justify-center">
+                <Item href="/" icon={<FaLinkedin/>}/>
+                <Item href="/" icon={<AiFillInstagram/>}/>
+                <Item href="/" icon={<FaTwitter />}/>
+                <Item href="/" icon={<FaFacebookF/>}/>
+            </div>
         </div>
+    );
+}
+function Item({icon , href }){
+    return(
+        <Link 
+            className="w-12 h-12 text-3xl shadow-3xl rounded-full flex items-center justify-center bg-white text-gray-700" 
+            href={href}
+        >
+            {icon}
+        </Link>
     );
 }
