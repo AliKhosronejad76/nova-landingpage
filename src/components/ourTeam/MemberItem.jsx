@@ -9,15 +9,26 @@ import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
 
 
+
+
 export default function MemberItem({
     jobTitle,
     name , 
-    img
+    img ,
+    ref ,
+    inView,
+    delay , 
    }){
    const [hover , setHover]= useState();
 
    return(
-       <div className={`w-full md:w-[48%] mb-10 bg-red-100 `}>  
+       <motion.div 
+        initial={{y: 10 , opacity: 0}}
+        animate={inView ? {y:0 , opacity:1}:{}}
+        transition={{delay:delay , duration : 0.7}}
+        ref={ref} 
+        className={`w-full md:w-[48%] mb-10 bg-red-100 `}
+       >  
            <div className="relative">
                <Image 
                    src={img}
@@ -33,7 +44,7 @@ export default function MemberItem({
                <p>{jobTitle}</p>
            </div>
 
-       </div>
+       </motion.div>
    );
 }
 

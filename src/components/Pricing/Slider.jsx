@@ -30,7 +30,7 @@ function Card({data}){
             </div>
             <ul className="flex flex-col gap-4 text-center text-gray-700 yekanbakhLight">
                 {
-                    data.items.map((item)=><li>{item.title}</li>)
+                    data.items.map((item , index )=><li key={index} >{item.title}</li>)
                 }
             </ul>
             <div>

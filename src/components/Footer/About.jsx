@@ -1,14 +1,25 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { FaTwitter } from "react-icons/fa";
 import { FaFacebookF } from "react-icons/fa";
+import { delay, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 
 
 export default function About(){
+    const [ref , inView] = useInView({triggerOnce:true});
+
     return(
-        <div className="w-full md:w-[48%] lg:w-[29%] flex flex-col gap-8">
+        <motion.div 
+         ref={ref}
+         initial={{y:10 , opacity:0}}
+         animate={inView ? {y:0 , opacity:1} : {}}
+         transition={{duration:0.8 , delay:0.5}}
+         className="w-full md:w-[48%] lg:w-[29%] flex flex-col gap-8">
             <Image 
                 width={300}
                 height={300}
@@ -29,7 +40,7 @@ export default function About(){
                 <Icon icon={<FaTwitter/>}/>
                 <Icon icon={<FaFacebookF/>}/>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

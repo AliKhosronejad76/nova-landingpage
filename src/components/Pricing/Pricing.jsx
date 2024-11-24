@@ -3,13 +3,22 @@ import { useNav } from "@/context/NavContextProvider";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Slider from "./Slider";
+import { delay, motion } from "framer-motion";
+import { InView, useInView } from "react-intersection-observer";
 
 export default function Pricing(){
     const {pricing} = useNav();
-    
+    const [ ref1 , InView1]  = useInView({triggerOnce:true});
+    const [ ref2 , InView2]  = useInView({triggerOnce:true}); 
+
     return(
         <section ref={pricing} className="bg-[#f3f3f3] py-24 px-8 flex justify-center items-start h-screen">
-            <div className="w-[49%] h-full flex flex-col justify-center gap-10">
+            <motion.div 
+             ref={ref1}
+             initial={{x:14 , opacity:0}}
+             animate={InView1 ? {x:0  , opacity:1}:{}}
+             transition={{duration:0.8 , delay:0.7}}
+             className="w-[49%] h-full flex flex-col justify-center gap-10">
                     <div className="flex flex-col gap-7">
                         <h1 className="text-5xl yekanbakhFat text-gray-800 px-4">جدول قیمت ها</h1>
 
@@ -22,10 +31,15 @@ export default function Pricing(){
                             <Button icon={<IoIosArrowBack/>} />
                         </div>
                     </div>
-            </div>
-            <div className="w-[49%] flex justify-center h-full">
+            </motion.div>
+            <motion.div 
+             ref={ref2}
+             initial={{x:-14 , opacity:0}}
+             animate={InView2 ? {x:0  , opacity:1}:{}}
+             transition={{duration:0.8 , delay:1.3}}
+            className="w-[49%] flex justify-center h-full">
                 <Slider/>
-            </div>
+            </motion.div>
         </section>
     )
 }
