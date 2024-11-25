@@ -17,13 +17,9 @@ body{
 }
 
 
-/* .drawer-open{
-  max-height:max-content;
-  overflow:visible;
-  transition:max-height 0.9s ease-out;
+
+.activeItemMenu{
+  /* border: 1px blue; */
+  color:red;
+  display: hidden !important;
 }
-.drawer-close{
-  max-height: 0;
-  overflow:hidden;
-  display:none;
-} */

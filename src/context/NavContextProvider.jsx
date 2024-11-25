@@ -1,10 +1,11 @@
 "use client";
 
-import {useRef , useContext , createContext } from "react";
+import {useRef , useContext , createContext , useState } from "react";
 
 const NavContext = createContext();
 
 export default function NavContextProvider({children}){
+    const [sectionId , setSectionId] = useState(1);
     const home = useRef(null);
     const services = useRef(null);
     const about = useRef(null);
@@ -18,7 +19,8 @@ export default function NavContextProvider({children}){
             top:elementRef.current.offsetTop , 
             behavior:'smooth',
         });
-        
+        console.log(elementRef);
+        console.log(window);
     }
     
     return(
@@ -30,6 +32,8 @@ export default function NavContextProvider({children}){
             pricing , 
             ourTeam , 
             contact ,
+            sectionId ,
+            setSectionId ,
             scrolltoSection,
         }}>
             {children}

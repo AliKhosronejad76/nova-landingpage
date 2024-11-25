@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useState } from "react";
 import { useNav } from "@/context/NavContextProvider";
 import { FaChartLine } from "react-icons/fa6";
 import { VscSymbolColor } from "react-icons/vsc";
@@ -11,7 +12,8 @@ import { motion } from "framer-motion";
 
 
 export default function InterduceServices(){
-    const {services} = useNav();
+    const {services , sectionId , setSectionId} = useNav();
+    const [containerRef , inViewContainer] = useInView();
     const [ref1 , inView1] = useInView({triggerOnce:true}); 
     const [ref2 , inView2] = useInView({triggerOnce:true}); 
     const [ref3 , inView3] = useInView({triggerOnce:true}); 
@@ -20,76 +22,82 @@ export default function InterduceServices(){
     const [ref6 , inView6] = useInView({triggerOnce:true}); 
     const [ref7 , inView7] = useInView({triggerOnce:true}); 
 
+
+
     return(
-        <section ref={services} className="pt-24 flex flex-col gap-8">
-           <div ref={ref1} >
-                <motion.h1
-                  initial={{y:10 , opacity:0}}
-                  animate={inView1 ? {y:0 , opacity:1}:{}}
-                  transition={{duration:0.5 , delay:.5}}
-                  className="text-center text-5xl yekanbakhFat my-5 text-gray-600">خدمات ما
-                </motion.h1>
-                <motion.p 
-                 initial={{y:10 , opacity:0}}
-                 animate={inView1 ? {y:0 , opacity:1}:{}}
-                 transition={{duration:0.5 , delay:.8}}
-                 className="text-center yekanbakhLight text-sm pb-6">
-                    با ما در وقت و هزینه خود صرفه جویی کنید
-                </motion.p>
-           </div>
-           
-            <div className="flex flex-wrap justify-between px-10 sm:px-20">
-                <ServiceItem
-                    ref={ref2}
-                    inView={inView2}
-                    delay={0.5}
-                    icon={<FaChartLine />}
-                    title={"تحلیل کسب و کار"}
-                    desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است." 
+        <div ref={containerRef}>
+
+            <section ref={services} className="pt-24 flex flex-col gap-8">
+                <div ref={ref1} >
+                    <motion.h1
+                        initial={{ y: 10, opacity: 0 }}
+                        animate={inView1 ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: .5 }}
+                        className="text-center text-5xl yekanbakhFat my-5 text-gray-600">خدمات ما
+                    </motion.h1>
+                    <motion.p
+                        initial={{ y: 10, opacity: 0 }}
+                        animate={inView1 ? { y: 0, opacity: 1 } : {}}
+                        transition={{ duration: 0.5, delay: .8 }}
+                        className="text-center yekanbakhLight text-sm pb-6">
+                        با ما در وقت و هزینه خود صرفه جویی کنید
+                    </motion.p>
+                </div>
+
+                <div className="flex flex-wrap justify-between px-10 sm:px-20">
+                    <ServiceItem
+                        ref={ref2}
+                        inView={inView2}
+                        delay={0.5}
+                        icon={<FaChartLine />}
+                        title={"تحلیل کسب و کار"}
+                        desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
                     />
-                <ServiceItem
-                    ref={ref3}
-                    inView={inView3}
-                    delay={0.7}
-                    icon={<VscSymbolColor />}
-                    title={"خدمات چاب"}
-                    desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
+                    <ServiceItem
+                        ref={ref3}
+                        inView={inView3}
+                        delay={0.7}
+                        icon={<VscSymbolColor />}
+                        title={"خدمات چاب"}
+                        desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
                     />
-                <ServiceItem 
-                  ref={ref4}
-                  inView={inView4}
-                  delay={0.9}
-                 icon={<MdOutlineGraphicEq />}
-                 title={"طراحی گرافیک"} 
-                 desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
-                 />
-               
-                <ServiceItem
-                    ref={ref5}
-                    inView={inView5}
-                    delay={0.5}
-                    icon={<HiCode />}
-                    title={"طراحی وب"}
-                    desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
-                     />
-                
-                <ServiceItem
-                    ref={ref6}
-                    inView={inView6}
-                    delay={.7}
-                    icon={<MdOutlineSecurity />}
-                    title={"امنیت"} desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
-                     />
-               
-                <ServiceItem
-                    ref={ref7}
-                    inView={inView7}
-                    delay={.9}
-                    icon={<TbDeviceImacCode />}
-                    title={"توسعه وب"} desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است." 
+                    <ServiceItem
+                        ref={ref4}
+                        inView={inView4}
+                        delay={0.9}
+                        icon={<MdOutlineGraphicEq />}
+                        title={"طراحی گرافیک"}
+                        desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
                     />
-            </div>
-        </section>
+
+                    <ServiceItem
+                        ref={ref5}
+                        inView={inView5}
+                        delay={0.5}
+                        icon={<HiCode />}
+                        title={"طراحی وب"}
+                        desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
+                    />
+
+                    <ServiceItem
+                        ref={ref6}
+                        inView={inView6}
+                        delay={.7}
+                        icon={<MdOutlineSecurity />}
+                        title={"امنیت"} desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
+                    />
+
+                    <ServiceItem
+                        ref={ref7}
+                        inView={inView7}
+                        delay={.9}
+                        icon={<TbDeviceImacCode />}
+                        title={"توسعه وب"} desc="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است."
+                    />
+                </div>
+            </section>
+        </div>
+
     );
 }
 

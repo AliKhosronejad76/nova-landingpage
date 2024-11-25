@@ -10,6 +10,7 @@ import Pricing from "@/components/Pricing/Pricing";
 
 
 export default function Home() {
+  
   return (
       <>
         <Banner/>
@@ -21,8 +22,6 @@ export default function Home() {
         <ClientComments/>
         <Contact />
         <Customers/>
-      
-
       </>
   );
 }

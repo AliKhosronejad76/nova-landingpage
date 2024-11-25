@@ -1,10 +1,11 @@
 "use client";
 import { useEffect  , useState } from "react";
 import { IoIosArrowUp } from "react-icons/io";
-
+import { useNav } from "@/context/NavContextProvider";
 
 export default function ScrollToTop(){
     const [active , setActive] = useState(false);
+    const {setSectionId} = useNav();
     useEffect(()=>{
        function scrollHadler(){
          if(window.scrollY > 800){
@@ -26,6 +27,7 @@ export default function ScrollToTop(){
 
     const gotoTop = ()=>{
      window.scrollTo({top:0 , behavior:"smooth"});
+     setSectionId(1);
    } 
     
     return(
