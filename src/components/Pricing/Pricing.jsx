@@ -1,4 +1,5 @@
 "use client";
+import {useRef} from "react";
 import { useNav } from "@/context/NavContextProvider";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
@@ -10,7 +11,14 @@ export default function Pricing(){
     const {pricing} = useNav();
     const [ ref1 , InView1]  = useInView({triggerOnce:true});
     const [ ref2 , InView2]  = useInView({triggerOnce:true}); 
-
+    const sliderRef = useRef(null);
+    const switcher = (data)=>{
+        console.log({ data , sliderRef })
+       if(sliderRef.current){
+           const width = sliderRef.current.offsetWidth ; 
+           sliderRef.current.scrollTo(sliderRef.current.scrollLeft+width*data , 0)
+       }
+    }
     return(
         <section ref={pricing} className="bg-[#f3f3f3] py-24 px-8 flex justify-center items-start h-screen">
             <motion.div 
@@ -27,8 +35,8 @@ export default function Pricing(){
                         </p>
 
                         <div className="flex w-full items-center justify-center my-9">
-                            <Button icon={<IoIosArrowForward/>}/>
-                            <Button icon={<IoIosArrowBack/>} />
+                            <Button onClick={()=>switcher(-1)} icon={<IoIosArrowForward/>}/>
+                            <Button onClick={()=>switcher(1)} icon={<IoIosArrowBack/>} />
                         </div>
                     </div>
             </motion.div>
@@ -38,7 +46,7 @@ export default function Pricing(){
              animate={InView2 ? {x:0  , opacity:1}:{}}
              transition={{duration:0.8 , delay:1.3}}
             className="w-[49%] flex justify-center h-full">
-                <Slider/>
+                <Slider sliderRef={sliderRef}/>
             </motion.div>
         </section>
     )

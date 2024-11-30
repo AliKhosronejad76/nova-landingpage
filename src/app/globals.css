@@ -23,3 +23,28 @@ body{
   color:red;
   display: hidden !important;
 }
+
+.scroll-container{
+  scroll-snap-type:x  mandatory ;
+  scroll-behavior:smooth ;
+
+}
+
+.scroll-container::-webkit-scrollbar{
+  width:0px ;
+  height:0px ;
+  display: none;
+ 
+
+}
+
+.scroll-container{
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  /* overflow-y: scroll; */
+}
+
+.sliderItem{
+  scroll-snap-align: start;
+}
+

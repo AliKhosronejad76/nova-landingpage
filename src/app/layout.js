@@ -23,7 +23,6 @@ export default function RootLayout({children}) {
         >
           <Header />
           <div className="max-w-screen min-w-screen ">
-
             {children}
           </div>
           <Footer />
