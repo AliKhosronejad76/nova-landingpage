@@ -20,13 +20,13 @@ export default function Portfolio(){
 
 
     return(
-        <section ref={portfolio} className="py-24  px-10 sm:px-20 sm:pb-48 md:pb-20 bg-white h-full" >
+        <section ref={portfolio} className="lg:py-40 px-10 sm:px-20 sm:pb-48 md:pb-20 bg-white h-full" >
            <motion.h1 
             ref={headerRef}
             initial={{y:20 , opacity:0}}
             animate={headerInView ? {y:0 , opacity:1} : {}}
             transition={{duration:0.5 , delay:0.3}}
-            className="text-4xl text-center lg:text-6xl yekanbakhFat my-5 text-gray-600">نمونه کار ها</motion.h1>
+            className="text-4xl text-center lg:text-6xl yekanbakhFat mb-10 text-gray-600">نمونه کار ها</motion.h1>
             <div className="flex flex-col md:flex-row gap-20 sm:gap-44 md:flex-wrap md:gap-3 md:justify-between h-full">
                 <Item
                     link="/"

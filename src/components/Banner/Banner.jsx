@@ -17,23 +17,12 @@ export default function Banner(){
     const [ref3 , inView3]  = useInView({triggerOnce:true});
     const [ref4 , inView4]  = useInView({triggerOnce:true});
 
-    
-  
-
-   
-        
-
-  
-       
-
-   
     return(
         <div ref={containerRef}>
-
             <section
                 ref={mergeRefs(home, ref1)}
                 style={{ backgroundImage: "url(/img/hero-bg-2.svg)", backgroundRepeat: "no-repeat" }}
-                className="h-screen flex flex-col lg:flex-row gap-8 lg:justify-between px-12  sm:px-20 py-32 relative "
+                className="h-full lg:h-screen flex flex-col lg:flex-row gap-8 justify-between px-12  sm:px-20 py-20 md:py-32 relative "
             >
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
@@ -56,7 +45,7 @@ export default function Banner(){
                         initial={{ y: 10, opacity: 0 }}
                         animate={inView2 ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: .8, delay: 1 }}
-                        className="text-3xl sm:text-5xl md:text-6xl lg:text-5xl yekanbakhFat lg:leading-relaxed md:leading-loose text-gray-600"
+                        className="text-4xl text-justify leading-loose sm:text-5xl md:text-6xl lg:text-5xl yekanbakhFat lg:leading-relaxed md:leading-loose text-gray-600"
 
 
                     >

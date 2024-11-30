@@ -33,7 +33,7 @@ export default function ClientComments(){
                 <CommentItem 
                     clientName="شروین احمدی"
                     jobTitle="برنامه نویس سمت کاربر"
-                    photo="/img/user2.png"
+                    photo="/img/user1.png"
                     ref={ref3}
                     inView={inView3}
                 
@@ -41,7 +41,7 @@ export default function ClientComments(){
                 <CommentItem 
                     clientName="علی قاسمی"
                     jobTitle="برنامه نویس"
-                    photo="/img/user3.png"
+                    photo="/img/user1.png"
                     ref={ref4}
                     inView={inView4}
                 

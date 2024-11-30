@@ -28,7 +28,7 @@ export default function OurTeam(){
            </motion.h1>
            <motion.h6 
             ref={ref2}
-            initial={{y:10 , opacity:1 }}
+            initial={{y:10 , opacity:0 }}
             animate={inView1 ? {y:0 , opacity:1 } : {}}
             transition={{ duration:0.5 , delay:0.5 }}
             className="text-sm text-center text-gray-600 yekanbakhLight">
@@ -39,26 +39,26 @@ export default function OurTeam(){
                     img="/img/mem1.jpg" 
                     ref={ref3}
                     inView={inView3}
-                    delay={0.6}
+                    delay={0.5}
                 />
                 <MemberItem 
                     img="/img/mem2.jpg" 
                     ref={ref4}
                     inView={inView4}
-                    delay={0.9}
+                    delay={0.6}
                 />
                 <MemberItem 
                     img="/img/mem3.jpg" 
                     ref={ref5}
                     inView={inView5}
-                    delay={0.6}
+                    delay={0.5}
                 
                 />
                 <MemberItem 
                     img="/img/mem4.jpg" 
                     ref={ref6}
                     inView={inView6}
-                    delay={0.9}
+                    delay={0.6}
                 />
 
            </div>

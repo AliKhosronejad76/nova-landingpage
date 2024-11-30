@@ -27,7 +27,7 @@ export default function InterduceServices(){
     return(
         <div ref={containerRef}>
 
-            <section ref={services} className="pt-24 flex flex-col gap-8">
+            <section ref={services} className="pt-2 md:pt-20 flex flex-col gap-8">
                 <div ref={ref1} >
                     <motion.h1
                         initial={{ y: 10, opacity: 0 }}
