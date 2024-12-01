@@ -65,7 +65,7 @@ export default function Banner(){
                         initial={{ y: 10, opacity: 0 }}
                         transition={{ duration: .8, delay: 1.9 }}
                         animate={inView3 ? { y: 0, opacity: 1 } : {}}
-                        className="bg-[#2f80ed] flex gap-3 items-center justify-center text-white w-[150px] h-[50px] lgw-[177px]  rounded-[60px]">
+                        className="bg-[#2f80ed] flex gap-3 items-center justify-center text-white w-[177px] h-[60px]  rounded-[60px]">
                         <FaAngleRight />
                         <span className="yekanbakhBold">انجامش بده</span>
                     </motion.button>
