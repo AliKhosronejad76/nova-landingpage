@@ -6,14 +6,17 @@ import { useNav } from "@/context/NavContextProvider";
 export default function ScrollToTop(){
     const [active , setActive] = useState(false);
     const {setSectionId} = useNav();
-    useEffect(()=>{
-        function start(){
-            window.scrollTo({top:0})
-        }
-        start();
+    // useEffect(()=>{
+    //     function start(){
+    //         window.scrollTo({top:0})
+    //     }
+    //     start();
     
     
-    },[])
+    // },[])
+    window.onload = ()=>{
+        window.scrollTo({top:0});
+    }
     useEffect(()=>{
        function scrollHadler(){
          if(window.scrollY > 800){
