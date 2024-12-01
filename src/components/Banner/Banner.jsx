@@ -29,7 +29,7 @@ export default function Banner(){
                     animate={inView ? { y: 0, opacity: 1 } : {}}
                     transition={{ duration: 0.8, delay: 0.5 }}
 
-                    className="w-full lg:w-[47%] order-2"
+                    className="w-full lg:w-[47%] order-2 pt-5 lg:pt-0"
                 >
                     <Image
 
@@ -45,7 +45,7 @@ export default function Banner(){
                         initial={{ y: 10, opacity: 0 }}
                         animate={inView2 ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: .8, delay: 1 }}
-                        className="leading-normal text-4xl text-justify  sm:text-5xl md:text-6xl lg:text-5xl yekanbakhFat lg:leading-relaxed md:leading-loose text-gray-600"
+                        className="leading-normal text-4xl text-justify  sm:text-5xl md:text-6xl lg:text-5xl yekanbakhFat lg:leading-relaxed md:leading-loose text-gray-600 mb-5 lg:mb-0"
 
 
                     >
@@ -56,7 +56,7 @@ export default function Banner(){
                         initial={{ y: 10, opacity: 0 }}
                         transition={{ duration: .8, delay: 1.4 }}
                         animate={inView3 ? { y: 0, opacity: 1 } : {}}
-                        className="leading-loose yekanbakhLight text-sm">
+                        className="leading-loose yekanbakhLight text-sm mb-5 ml:mb-0">
                         سوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
                     </motion.p>
 
