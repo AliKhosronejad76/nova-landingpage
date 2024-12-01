@@ -7,6 +7,11 @@ export default function ScrollToTop(){
     const [active , setActive] = useState(false);
     const {setSectionId} = useNav();
     useEffect(()=>{
+        window.scrollTo({top:0})
+    
+    
+    },[])
+    useEffect(()=>{
        function scrollHadler(){
          if(window.scrollY > 800){
             setActive(true);
