@@ -1,6 +1,6 @@
 export default function InfoItem({icon , info1 , info2}){
     return(
-        <div className="w-full bg-white rounded-lg flex items-center gap-4 py-4 px-3 transition duration-500 sadow-lg hover:shadow-xl">
+        <div className="mb-6 lg:mb-0 w-full bg-white rounded-lg flex items-center gap-4 py-4 px-3 transition duration-500 sadow-lg hover:shadow-xl">
             <div className="min-w-16 min-h-16 flex items-center justify-center text-white bg-[#2f80ed] text-3xl rounded-full">
                 {icon}
             </div>
