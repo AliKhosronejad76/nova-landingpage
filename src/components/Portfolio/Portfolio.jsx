@@ -20,7 +20,7 @@ export default function Portfolio(){
 
 
     return(
-        <section ref={portfolio} className="lg:py-40 px-10 sm:px-20 sm:pb-48 md:pb-20 bg-white h-full" >
+        <section ref={portfolio} className="py-24 lg:py-40 px-10 sm:px-20 sm:pb-48 md:pb-20 bg-white h-full" >
            <motion.h1 
             ref={headerRef}
             initial={{y:20 , opacity:0}}

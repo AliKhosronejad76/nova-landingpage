@@ -45,7 +45,7 @@ export default function Banner(){
                         initial={{ y: 10, opacity: 0 }}
                         animate={inView2 ? { y: 0, opacity: 1 } : {}}
                         transition={{ duration: .8, delay: 1 }}
-                        className="text-4xl text-justify leading-loose sm:text-5xl md:text-6xl lg:text-5xl yekanbakhFat lg:leading-relaxed md:leading-loose text-gray-600"
+                        className="text-4xl text-justify  sm:text-5xl md:text-6xl lg:text-5xl yekanbakhFat lg:leading-relaxed md:leading-loose text-gray-600"
 
 
                     >
