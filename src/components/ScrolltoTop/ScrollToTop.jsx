@@ -33,7 +33,7 @@ export default function ScrollToTop(){
     return(
         <button 
             onClick={()=>gotoTop()}
-            className={` ${active?"flex":"hidden"} bg-sky-800 text-white w-[42px] h-[42px] sm:w-[55px] sm:h-[55px]  items-center justify-center fixed bottom-5 right-5 z-[90]  rounded-lg text-4xl`}
+            className={` ${active?"flex":"hidden"} bg-sky-800 text-white  w-[55px] h-[55px]  items-center justify-center fixed bottom-5 right-5 z-[90]  rounded-md text-4xl`}
         >
             <IoIosArrowUp/>
         </button>
