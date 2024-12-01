@@ -10,7 +10,7 @@ import { useInView } from "react-intersection-observer";
 
 export default function Portfolio(){
     const {portfolio} = useNav();
-    const [headerRef , headerInView] = useInView();
+    const [headerRef , headerInView] = useInView({triggerOnce:true});
     const [ref1 , inView1  ] = useInView({triggerOnce:true});
     const [ref2 , inView2 ] = useInView({triggerOnce:true});
     const [ref3 , inView3 ] = useInView({triggerOnce:true});
@@ -109,7 +109,7 @@ function Item({img , link , ref , inView , delay}){
             <footer className="h-[180px] w-[90%] py-3 px-3 rounded-xl absolute bg-white shadow-md right-0 top-48 sm:top-96 mb-30 flex flex-col justify-center gap-5 z-[70]">
                 <h1 className="yekanbakhFat md:yekanbakhBold text-2xl md:text-xl">توسعه گرافیکی</h1>
 
-                <p className="text-lg md:text-sm leading-loose">
+                <p className="text-base md:text-sm leading-loose">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                 </p>
             </footer>
