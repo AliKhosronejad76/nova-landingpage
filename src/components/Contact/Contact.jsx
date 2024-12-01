@@ -16,7 +16,7 @@ export default function Contact(){
     const [ref3 , inView3] = useInView({triggerOnce:true});
 
     return(
-        <section ref={contact} className="text-gray-600 bg-[#f3f3f3] py-24 pb-8 px-8 h-max">
+        <section ref={contact} className="text-gray-600 bg-[#f3f3f3] py-24 pb-8 px-8 min-h-full h-max">
             <motion.h1 
                 ref={ref1}
                 initial={{y:10 , opacity:0}}
