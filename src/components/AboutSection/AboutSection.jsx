@@ -15,7 +15,7 @@ export default function AboutSection(){
               initial={{y:20 , opacity:0}}
               animate={inView ? {y:0 , opacity:1}:{}}
               transition={{delay:0.6 , duration:0.8}} 
-              className="w-full flex items-center lg:w-[50%] order-2">
+              className="minh-full max-h-max w-full flex items-center lg:w-[50%] order-2">
                 <Image 
                     src="img/about-img.svg"
                     width={500}
@@ -25,7 +25,7 @@ export default function AboutSection(){
                 />
             </motion.div>
 
-            <div className="w-full lg:w-[50%] flex flex-col gap-5 order-1">
+            <div className="w-full lg:w-[50%] flex flex-col gap-10 order-1">
                 <motion.h1
                  initial={{y:10 , opacity:0}}
                  animate={inView ? {y:0 , opacity:1}:{}}
