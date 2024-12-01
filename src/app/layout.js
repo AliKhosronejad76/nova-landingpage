@@ -17,20 +17,20 @@ export default function RootLayout({children}) {
   return (
     <html lang="fa" dir="rtl">
       <DrawerContextProvider>
-      <NavContextProvider>
+       <NavContextProvider>
+
         <body
           className={'overflow-x-hidden'}
         >
-          <Header />
-          <div className="max-w-screen min-w-screen ">
-            {children}
-          </div>
-          <Footer />
+            <Header />
+            <div className="max-w-screen min-w-screen ">
+                {children}
+            </div>
+            <Footer />
           <ScrollToTop />
         </body>
-      </NavContextProvider>
-      </DrawerContextProvider>
-
+        </NavContextProvider>
+        </DrawerContextProvider>
     </html>
   );
 }
