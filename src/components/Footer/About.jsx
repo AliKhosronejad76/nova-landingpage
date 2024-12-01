@@ -23,18 +23,18 @@ export default function About(){
             <Image 
                 width={300}
                 height={300}
-                className={"w-[200px]"}
+                className={"w-[200px] mb-4"}
                 alt="logo"
                 src="/img/logo.svg"
             />
             <div>
-                <p className="text-sm leading-loose">
+                <p className="text-sm leading-loose mb-4">
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.
                 لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                 </p>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 mb-4">
                 <Icon icon={<FaLinkedin/>}/>
                 <Icon icon={<AiFillInstagram/>}/>
                 <Icon icon={<FaTwitter/>}/>
@@ -46,7 +46,7 @@ export default function About(){
 
 function Icon({icon}){
     return(
-        <Link href="/" className="bg-[#2f80ed] opacity-50 w-12 h-12 rounded-full flex items-center justify-center  text-white text-3xl transition duration-300 hover:opacity-100">
+        <Link href="/" className="bg-[#2f80ed] opacity-50 w-12 h-12 rounded-full flex items-center justify-center  text-white text-3xl transition duration-300 hover:opacity-100 mx-3">
             {icon}
         </Link>
     );
