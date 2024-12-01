@@ -86,7 +86,7 @@ function Item({img , link , ref , inView , delay}){
             initial={{ y: 20 , opacity: 0 }}
             animate={inView ?{ y: 0  , opacity: 1 }:{}}
             transition={{delay:delay , duration:0.7}}
-            className="w-full md:w-[48%] lg:w-[32%] mb-12 lg:mb-44 relative h-auto  bg-transparent">
+            className="w-full md:w-[48%] lg:w-[32%] mb-24 lg:mb-44 relative h-auto  bg-transparent">
             <header className="w-full h-[320px] sm:h-[450px]">
                 <Image
                     src={img}
