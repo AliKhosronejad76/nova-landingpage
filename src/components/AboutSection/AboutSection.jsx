@@ -15,7 +15,7 @@ export default function AboutSection(){
               initial={{y:20 , opacity:0}}
               animate={inView ? {y:0 , opacity:1}:{}}
               transition={{delay:0.6 , duration:0.8}} 
-              className="minh-full max-h-max w-full flex items-center lg:w-[50%] order-2">
+              className="minh-full max-h-auto w-full flex items-center lg:w-[50%] order-2">
                 <Image 
                     src="img/about-img.svg"
                     width={500}
