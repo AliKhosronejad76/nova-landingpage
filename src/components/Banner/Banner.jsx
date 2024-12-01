@@ -56,7 +56,7 @@ export default function Banner(){
                         initial={{ y: 10, opacity: 0 }}
                         transition={{ duration: .8, delay: 1.4 }}
                         animate={inView3 ? { y: 0, opacity: 1 } : {}}
-                        className="leading-loose yekanbakhLight text-sm mb-5 ml:mb-0">
+                        className="leading-loose yekanbakhLight text-base md:text-sm mb-5 ml:mb-0">
                         سوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
                     </motion.p>
 
