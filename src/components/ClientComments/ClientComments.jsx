@@ -33,7 +33,7 @@ export default function ClientComments(){
                 <CommentItem 
                     clientName="شروین احمدی"
                     jobTitle="برنامه نویس سمت کاربر"
-                    photo="/img/user1.png"
+                    photo="/img/user2.png"
                     ref={ref3}
                     inView={inView3}
                 
@@ -41,7 +41,7 @@ export default function ClientComments(){
                 <CommentItem 
                     clientName="علی قاسمی"
                     jobTitle="برنامه نویس"
-                    photo="/img/user1.png"
+                    photo="/img/user3.png"
                     ref={ref4}
                     inView={inView4}
                 
@@ -79,7 +79,7 @@ function CommentItem({clientName , jobTitle , photo , inView , ref}){
 
 
         <div>
-            <p className=" yekahbakhLight leading-loose text text-justify text-sm mt-5 lg:mt-0">
+            <p className=" yekahbakhLight leading-loose text text-justify text-sm mt-8 lg:mt-0">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، 
             </p>
         </div>
