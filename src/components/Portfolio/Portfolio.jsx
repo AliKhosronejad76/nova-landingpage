@@ -86,7 +86,7 @@ function Item({img , link , ref , inView , delay}){
             initial={{ y: 20 , opacity: 0 }}
             animate={inView ?{ y: 0  , opacity: 1 }:{}}
             transition={{delay:delay , duration:0.7}}
-            className="w-full md:w-[48%] lg:w-[32%] mb-24 lg:mb-44 relative h-auto  bg-transparent">
+            className="w-full md:w-[48%] lg:w-[32%] mb-24 sm:mb-32 lg:mb-44 relative h-auto  bg-transparent">
             <header className="w-full h-[320px] sm:h-[450px]">
                 <Image
                     src={img}
@@ -107,9 +107,9 @@ function Item({img , link , ref , inView , delay}){
             </header>
 
             <footer className="h-[180px] w-[90%] py-3 px-3 rounded-xl absolute bg-white shadow-md right-0 top-48 sm:top-96 mb-30 flex flex-col justify-center gap-5 z-[70]">
-                <h1 className="yekanbakhBold text-xl">توسعه گرافیکی</h1>
+                <h1 className="yekanbakhFat md:yekanbakhBold text-2xl md:text-xl">توسعه گرافیکی</h1>
 
-                <p className="text-sm leading-loose">
+                <p className="text-lg md:text-sm leading-loose">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
                 </p>
             </footer>

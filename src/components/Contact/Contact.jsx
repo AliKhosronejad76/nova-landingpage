@@ -35,9 +35,9 @@ export default function Contact(){
                 initial={{y:10 , opacity:0}}
                 animate={inView3 ? {y:0 , opacity:1} : {}}
                 transition={{delay:0.8 , duration:0.5}} 
-                 className="w-full flex flex-col lg:flex-row">
+                 className="h-full w-full flex flex-col lg:flex-row">
                 <Form />
-                <div className="w-full lg:w-[33%] flex flex-col justify-start gap-6 px-3 py-3 ">
+                <div className="h-full w-full lg:w-[33%] flex flex-col justify-start gap-6 px-3 py-3 ">
                     <InfoItem 
                         info2={"+004389478327"}
                         info1={"0045939863784"} 
