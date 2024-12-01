@@ -36,7 +36,7 @@ export default function Banner(){
                         src="/img/hero-img.svg"
                         width={600}
                         height={600}
-                        className="w-full "
+                        className="w-full h-full"
                     />
                 </motion.div>
                 <div className="w-full h-full lg:w-[49%] flex flex-col  gap-8 lgjustify-between order-1">
