@@ -6,12 +6,10 @@ import { useNav } from "@/context/NavContextProvider";
 export default function ScrollToTop(){
     const [active , setActive] = useState(false);
     const {setSectionId} = useNav();
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
 
-
-
-
-    
-    
    
     useEffect(()=>{
        function scrollHadler(){

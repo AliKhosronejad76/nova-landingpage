@@ -14,9 +14,7 @@ export const metadata = {
 
 
 export default function RootLayout({children}) {
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
+ 
   return (
     <html lang="fa" dir="rtl">
       <DrawerContextProvider>
