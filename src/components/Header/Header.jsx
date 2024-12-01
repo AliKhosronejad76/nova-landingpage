@@ -55,7 +55,7 @@ export default function Header(){
                           width={400}
                           height={400}
                           src="/img/logo.svg"
-                          className="w-[140px] sm:w-[160px]"
+                          className="w-[120px] sm:w-[160px]"
                         />
                     </Link>
                 </div>

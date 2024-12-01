@@ -19,7 +19,7 @@ export default function About(){
          initial={{y:10 , opacity:0}}
          animate={inView ? {y:0 , opacity:1} : {}}
          transition={{duration:0.8 , delay:0.5}}
-         className="w-full md:w-[48%] lg:w-[29%] flex flex-col gap-8">
+         className="h-full w-full md:w-[48%] lg:w-[29%] flex flex-col gap-12">
             <Image 
                 width={300}
                 height={300}

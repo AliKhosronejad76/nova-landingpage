@@ -14,7 +14,7 @@ export default function Services(){
         transition={{duration:0.8 , delay:0.9}}
 
         className="w-full md:w-[48%] lg:w-[21%] flex flex-col gap-8" >
-            <h3 className="yekanbakhFat text-2xl">خدمات</h3>
+            <h3 className="yekanbakhFat text-4xl md:text-2xl">خدمات</h3>
             <ul className="yekahbakhLight">
                 <ListItem  href="/" title="طزاحی وب" />
                 <ListItem  href="/" title="توسعه وب" />
