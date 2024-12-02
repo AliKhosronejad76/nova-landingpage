@@ -55,6 +55,7 @@ export default function Header(){
                         <Image 
                           width={400}
                           height={400}
+                          alt="logo"
                           src="/img/logo.svg"
                           className="w-[120px] sm:w-[160px]"
                         />

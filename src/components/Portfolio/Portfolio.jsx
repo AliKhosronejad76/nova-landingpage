@@ -93,6 +93,7 @@ function Item({img , link , ref , inView , delay}){
                     width={500}
                     height={500}
                     className="w-full absolute h-full"
+                    alt="resume-img"
                 />
                 <motion.div
                     initial={{ y: 8, opacity: 0 }}

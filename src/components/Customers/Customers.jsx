@@ -21,6 +21,7 @@ export default function Customers(){
                 className="w-full h-[200px]"
                 width={200}
                 height={200}
+                alt="customers"
             />
         </motion.section>
     );

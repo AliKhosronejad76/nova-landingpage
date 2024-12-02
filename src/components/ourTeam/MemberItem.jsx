@@ -34,6 +34,7 @@ export default function MemberItem({
                    src={img}
                    width={700}
                    height={700}
+                   alt="memberitem"
                    className="w-full object-cover relative h-[550px]"
                /> 
                <OverlyOption hover={hover} setHover={setHover} />

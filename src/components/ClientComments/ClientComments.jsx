@@ -70,6 +70,7 @@ function CommentItem({clientName , jobTitle , photo , inView , ref}){
                         height={300}
                         className="w-full h-full "
                         src={photo}
+                        alt="client"
                     />
                 </div>
                 <span className="yekanbakhHeavy text-xl">{clientName}</span>
