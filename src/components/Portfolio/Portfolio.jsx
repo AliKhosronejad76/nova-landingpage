@@ -34,6 +34,7 @@ export default function Portfolio(){
                     ref={ref1}
                     inView={inView1}
                     delay={0.6}
+                    title={"موبایل"}
                 />
                 <Item
                     link="/"
@@ -41,6 +42,8 @@ export default function Portfolio(){
                     ref={ref2}
                     inView={inView2}
                     delay={0.8}
+                    title={"طراحی گرافیکی"}
+
                 />
 
                 <Item 
@@ -49,6 +52,7 @@ export default function Portfolio(){
                 ref={ref3}
                 inView={inView3}
                 delay={1}
+                title={"طراحی وب"}
                 />
                 <Item
                     link="/"
@@ -56,7 +60,7 @@ export default function Portfolio(){
                     ref={ref4}
                     inView={inView4}
                     delay={0.6}
-
+                    title=" خدمات سئو"
                 />
                 <Item
                     link="/"
@@ -64,6 +68,8 @@ export default function Portfolio(){
                     ref={ref5}
                     inView={inView5}
                     delay={0.8}
+                    title="تولید محتوا"
+
 
                 />
                 <Item
@@ -72,6 +78,7 @@ export default function Portfolio(){
                     ref={ref6}
                     inView={inView6}
                     delay={1}
+                    title="توسعه وب"
                 />
             </div>
 
@@ -79,7 +86,7 @@ export default function Portfolio(){
     );
 }
 
-function Item({img , link , ref , inView , delay}){
+function Item({ img , link , ref , inView , delay , title }){
     return(
         <motion.article 
             ref={ref}
@@ -108,7 +115,7 @@ function Item({img , link , ref , inView , delay}){
             </header>
 
             <footer className="h-[180px] w-[90%] py-3 px-3 rounded-xl absolute bg-white shadow-md right-0 top-48 sm:top-96 mb-30 flex flex-col justify-center gap-5 z-[70]">
-                <h1 className="yekanbakhFat md:yekanbakhBold text-2xl md:text-xl">توسعه گرافیکی</h1>
+                <h1 className="yekanbakhFat md:yekanbakhBold text-2xl md:text-xl">{title}</h1>
 
                 <p className="text-base md:text-sm leading-loose">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
