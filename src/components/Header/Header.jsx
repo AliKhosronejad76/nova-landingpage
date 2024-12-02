@@ -5,6 +5,7 @@ import Image from "next/image";
 import { CiBellOn } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { LiaTimesSolid } from "react-icons/lia";
 import Drawer from "../Drawer/Drawer";
 import Menu from "../Menu/Menu";
 import { useDrawer } from "@/context/DrawerContextProvider";
@@ -66,8 +67,8 @@ export default function Header(){
                  <Menu dir="row"/>
 
                 </div>
-                <div className="text-3xl text-gray-600 w-full flex items-center justify-end lg:hidden"> 
-                    <GiHamburgerMenu onClick={()=>setDrawer(prev=>!prev)}/>
+                <div onClick={()=>setDrawer(prev=>!prev)} className="text-3xl text-gray-600 w-full flex items-center justify-end transition-all duration-500 lg:hidden"> 
+                  {drawer ?  <LiaTimesSolid  className="transition duration-500"/> : <GiHamburgerMenu className="transition duration-500"/> }
                 </div>
                 <div className="hidden h-full lg:flex items-center gap-2">
                     <button className="text-2xl">

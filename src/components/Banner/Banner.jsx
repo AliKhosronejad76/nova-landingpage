@@ -22,7 +22,7 @@ export default function Banner(){
             <section
                 ref={mergeRefs(home, ref1)}
                 style={{ backgroundImage: "url(/img/hero-bg-2.svg)", backgroundRepeat: "no-repeat" }}
-                className="h-full lg:h-screen flex flex-col lg:flex-row gap-24 justify-between px-12  sm:px-20 py-20 md:py-32 relative "
+                className="h-full lg:h-screen flex flex-col lg:flex-row gap-24 justify-between px-12  sm:px-20 py-28 md:py-32 relative "
             >
                 <motion.div
                     initial={{ y: 30, opacity: 0 }}
