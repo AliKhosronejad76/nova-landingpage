@@ -116,7 +116,7 @@ function Item({ img , link , ref , inView , delay , title }){
             </header>
 
             <footer className="h-[180px] w-[90%] py-3 px-3 rounded-xl absolute bg-white shadow-md right-0 top-48 sm:top-96 mb-30 flex flex-col justify-center gap-5 z-[70]">
-                <h1 className="yekanbakhFat md:yekanbakhBold text-2xl md:text-3xl">{title}</h1>
+                <h1 className="yekanbakhFat md:yekanbakhBold text-2xl md:text-3  xl">{title}</h1>
 
                 <p className="text-base md:text-sm leading-loose">
                     لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است
