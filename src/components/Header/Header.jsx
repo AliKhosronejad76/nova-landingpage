@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState , useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -22,16 +22,13 @@ export default function Header(){
     }
 
 
-    // window.onbeforeunload = function () {
-    //     window.scrollTo(0, 0);
-    // }
-    // window.onload = function () {
-    //     window.scrollTo(0, 0);
-    // }
-    useEffect(()=>{
-        window.scrollTo(0, 0);
-
-    },[])
+   useEffect(()=>{
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+   },[])
+  
+  
     
     useEffect(()=>{
        const changeNavBg = ()=>{

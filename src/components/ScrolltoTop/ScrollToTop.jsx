@@ -6,9 +6,12 @@ import { useNav } from "@/context/NavContextProvider";
 export default function ScrollToTop(){
     const [active , setActive] = useState(false);
     const {setSectionId} = useNav();
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    }
+    useEffect(()=>{
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    },[])
+   
 
    
     useEffect(()=>{
@@ -27,7 +30,7 @@ export default function ScrollToTop(){
       
        return ()=> window.removeEventListener("scroll",scrollHadler)
     
-    },[window.screenY]);
+    },[]);
 
 
     const gotoTop = ()=>{
